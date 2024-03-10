@@ -4,9 +4,9 @@ public class Methods {
     public static void main(String[] args) {
         // Пример вызова метода
         String string = getString("HELLO");
-        // Ожидаемый результат hello System.out.println(string);
+       System.out.println(string);
         // Вызовы ваших методов
-
+        System.out.println(sum(1,2));
     }
 
     // Метод принимающий строку и преобразующий ее в нижний регистр
@@ -17,6 +17,7 @@ public class Methods {
 // Реализуйте функциональность согласно описанию
 
 // TODO: Создайте метод который вернет сумму двух чисел
+    public static int sum(int a, int b) { return a + b;}
 
 
 // TODO: Создайте метод который вернет сумму двух переданных строк
