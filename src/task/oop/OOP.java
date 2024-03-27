@@ -168,15 +168,13 @@ public class OOP {
     //  в которых можно описать специфичные методы и свойства.
 
     abstract class Employee {
-        Employee(String name) {
+        Employee(String name, int age) {
             this.name = name;
+            this.age = age;
         }
 
         private int age;
 
-        public void setName(String name) {
-            this.name = name;
-        }
 
         public String getName() {
             return name;
@@ -184,12 +182,6 @@ public class OOP {
 
         private String name;
 
-
-
-        public void setAge(int age) {
-            this.age = age;
-            this.name = name;
-        }
 
         public int getAge() {
             return age;
@@ -201,16 +193,14 @@ public class OOP {
     }
 
     class Manager extends Employee {
-        Manager(String name) {
-            super();
-            getName(String name);
+        Manager(String name, int age) {
+            super(name, age);
         }
 
-        int age = 45;
 
         @Override
         void work() {
-            System.out.println("Управляет проектами");
+            System.out.println(getName() + " Управляет проектами");
         }
 
         @Override
@@ -220,11 +210,10 @@ public class OOP {
     }
 
     class WarehouseWorker extends Employee {
-        WarehouseWorker(String name) {
-            super(name);
+        WarehouseWorker(String name, int age) {
+            super(name, age);
         }
 
-        int age = 37;
 
         @Override
         void work() {
